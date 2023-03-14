@@ -29,3 +29,73 @@ f = a*b
 g = a**b #제곱
 print(c,d,e,f,g) 
 ~~~
+#### 문자열
+1. 큰 따옴표 "Hello World"  
+2. 작은 따옴표 : '대한민국'  
+3. 큰 따옴표 3개 : """Hello!"""
+4. 작은 따옴표 3 : 
+'''Life is too short. You need 
+python '''  
+~~~
+myName = "Sebin Oh" #낙타표기법 (중간 대문자)
+my_Name = "오세빈" #스네이크 표기법 (_언더바 사용한 것)
+MyName = 'kiki' # 파스칼 표기법 (앞 대문자)
+_my_name = "korea"
+MYNAME = "God is love"
+my2name = "12345"
+# 2myname = '9876' 숫자로 시작할 수 없다.
+# my-name = "michle" 위에바가 들어가면 안된다.
+# my name = "kiki" 스페이스바를 쓰면 안된다.
+myStr = '123' #str
+myNum = 123 # int
+
+print(myStr, myNum)
+#print(myStr+myNum) 숫자와 문자이기 때문에 합해지지않는다.
+print(type(myStr))
+print(type(myNum))
+~~~
+##**여러개 변수 할당**
+~~~
+x,y,z = "포도", "딸기", "수박"
+print(x)
+print(y)
+print(z)
+~~~
+~~~
+ a = b = c = "오렌지"
+ print(a)
+ print(b)
+ print(c)
+~~~
+~~~
+fruits = ["포도", "딸기", "수박"]
+x , y , z = fruits
+print(x)
+print(y)
+print(z)
+~~~
+~~~
+x = "Life"  
+y = "is"  
+z = "Beautiful"  
+print(x,y,z)
+print(x+y+z)
+~~~
+~~~
+a = 1
+b = 2
+c = 3 # "3" str 으로 만들면 에러가 난다.
+print(a,b,c)
+print(a+b+c)
+~~~
+### **데이터 유형**
++ 텍스트
++ 숫자
++ 불(bool)
+~~~
+a = 100
+b = 200
+result = a + b
+print(a,  '+'  ,  b,  '='  , result)  
+print('100', '+' , '200', '=', '300')
+~~~
