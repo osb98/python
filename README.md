@@ -129,3 +129,11 @@ result = a % b
 print(a, "%", b, "=" , result)
 # input 사용 제곱 몫 나머지 계산기
 ~~~
+~~~
+#잘못된 
+num1 = input("숫자입력1:  ")
+num2 = input("숫자입력2:  ")
+result = num1 + num2
+print(type(num1))
+print(num1, "+", num2, "=", result)
+# 이렇게하면 num이 스트링으로 잡히기 때문에 int를 넣어줘야한다.
