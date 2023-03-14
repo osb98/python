@@ -138,6 +138,7 @@ print(type(num1))
 print(num1, "+", num2, "=", result)
 # 이렇게하면 num이 스트링으로 잡히기 때문에 int를 넣어줘야한다.
 ~~~
+~~~
 a = input("이름을 입력해주세요: ")
 b = input("전화번호를 입력해주세요: ")
 c = int(input("무게를 입력해주세요 (g단위) "))
