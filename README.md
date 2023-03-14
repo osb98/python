@@ -15,5 +15,16 @@
     b = 20 
     c = a + b  
     d = b - a
-    print(c, d) 
-    
+    print(c, d)
+~~~
+a = 10
+b = 3
+ #나눗셈
+c = a/b  #  나눗셈  
+d = a//b  #  몫  
+e = a%b  #  나머지 
+# 곱셈
+f = a*b
+g = a**b #제곱
+print(c,d,e,f,g) 
+~~~
