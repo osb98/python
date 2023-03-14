@@ -97,5 +97,35 @@ a = 100
 b = 200
 result = a + b
 print(a,  '+'  ,  b,  '='  , result)  
-print('100', '+' , '200', '=', '300')
+result = a - b
+print(a,  '-'  ,  b,  '='  , result)  
+result = a * b
+print(a,  '*'  ,  b,  '='  , result)  
+result = a / b
+print(a,  '/'  ,  b,  '='  , result)  
+~~~
+#### input() 함수 이용한 계산기  
+~~~
+a = int(input("첫번째 숫자를 입력해 주세요: "))
+b = int(input("두번째 숫자를 입력해 주세요: "))
+result = a + b
+print(a, "+", b, "=" , result)
+result = a - b
+print(a, "-", b, "=" , result)
+result = a * b
+print(a, "*", b, "=" , result)
+result = a / b
+print(a, "/", b, "=" , result)
+# input 사용 사칙연산 계산기
+~~~
+~~~
+a = int(input("첫번째 숫자를 입력해 주세요: "))
+b = int(input("두번째 숫자를 입력해 주세요: "))
+result = a ** b
+print(a, "**", b, "=" , result)
+result = a // b
+print(a, "//", b, "=" , result)
+result = a % b
+print(a, "%", b, "=" , result)
+# input 사용 제곱 몫 나머지 계산기
 ~~~
