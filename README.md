@@ -130,7 +130,7 @@ print(a, "%", b, "=" , result)
 # input 사용 제곱 몫 나머지 계산기
 ~~~
 ~~~
-#잘못된 
+#잘못된 예시 
 num1 = input("숫자입력1:  ")
 num2 = input("숫자입력2:  ")
 result = num1 + num2
