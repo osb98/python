@@ -291,3 +291,18 @@ for num in range(0,7) :
   number. append(random.randrange(1,46))
 print("생성된 리스트", number)
 ~~~
+### **반복문**  
+~~~
+for i in range(0,3,1): #시작값,끝값+1,증가값
+  print("%d 안녕하세요~" % i) #반복 내용
+  #print(i)
+print("반갑습니다")
+~~~
+~~~
+for i in range(1,9,1):
+  print("%d " % i, end="")  
+print("\n")
+for i in range(1,9,1):
+  print("\n%d" % i, end=" ")
+~~~
+~~~
