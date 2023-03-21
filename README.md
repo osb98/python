@@ -306,13 +306,6 @@ for i in range(1,9,1):
   print("\n%d" % i, end=" ")
 ~~~
 ~~~
-for i in range(1,9,1):
-  print("%d " % i, end="")  
-print("\n")
-for i in range(1,9,1):
-  print("\n%d" % i, end=" ")
-~~~
-~~~
 sum=0
 for i in range(1,11,1):
   sum = sum+ i
