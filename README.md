@@ -306,3 +306,45 @@ for i in range(1,9,1):
   print("\n%d" % i, end=" ")
 ~~~
 ~~~
+for i in range(1,9,1):
+  print("%d " % i, end="")  
+print("\n")
+for i in range(1,9,1):
+  print("\n%d" % i, end=" ")
+~~~
+~~~
+sum=0
+for i in range(1,11,1):
+  sum = sum+ i
+print("1~10까지 합계 : %d" % sum)
+~~~
+### **QUIZ3** : 숫자 입력을 받아 1부터 입력된 숫자까지의 합을 for문을 활용하여 출력하시오  
+~~~
+sum,num=0,0
+num = int(input("숫자입력 : "))
+for i in range(1,num+1,1):
+  sum = sum+ i
+print("1~n까지 합계 : %d" % sum)
+~~~
+### **중첩 for문**  
+~~~
+i,j,k=0,0,0
+k= int(input("구구단 단수 입력 : "))
+for i in range(1,10,1):
+    print("%d x %d = %2d" % (k,i,k*i))
+print("")
+~~~
+### **quiz 구구단을 2,3,4,5 출력 후 줄바꿔서 출력하시오**  
+~~~
+m,n=0,0
+for m in range(1,10,1):
+  for n in range(2,6,1):
+      print("%d x %d = %2d" % (n,m,m*n), end='\t')     
+  print("")
+print("\n")
+m,n=0,0
+for m in range(1,10,1):
+  for n in range(6,10,1):
+   print("%d x %d = %2d" % (n,m,n*m), end='\t' )
+  print("") 
+~~~
