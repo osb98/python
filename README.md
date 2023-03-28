@@ -341,3 +341,198 @@ for m in range(1,10,1):
    print("%d x %d = %2d" % (n,m,n*m), end='\t' )
   print("") 
 ~~~
+# CH3. 자료형  
+
+## 1. 인덱스와 슬라이싱  
+  
+  
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]
+print(L[1])
+~~~
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]
+print(L[-3])
+~~~
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]
+print(L[0:9])
+~~~
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]
+print(L[0:9:2])
+~~~
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]
+print(len(L))
+print(L[len(L)-1])
+~~~
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]
+L[0] = 99
+L[9] = '가나다'
+L[1] = [1,2,3]
+print(L)
+print(L[9])
+~~~
+~~~
+a = [1,2,3]
+b = [4,5,6]
+c = a+b
+print(a+b)
+print(c)
+print(a*3)
+~~~
+~~~
+L = [1,2,3,4,5]
+print(L)
+L.append(6) #리스트 뒤에 추가
+print(L)
+L.remove(3) #해당 요소값을 삭제
+print(L)
+~~~
+~~~
+k=['a', 'b', 'c', 'd']
+k.remove('d')
+print(k)
+~~~
+~~~
+k='God is love!'
+print(k[:3])
+print(k[6:])
+print(k[-8:-1])
+~~~
+L = [0,1,2,3,4,5,6,7,8,9]  
+a = [1,2,3]  
+b = [4,5,6]  
+d=['a', 'b', 'c', 'd']
+e='God is love!'  
+[3] 일경우 3 (0부터 3 즉 4번째 배열숫자)  
+[-3] 일경우 7 (0부터 -3 즉 -3번째 배열숫자)  
+[0:3] 일경우 0 1 2 (0부터 2(3-1)까지)  
+[0:5:2] 일경우 0 2 4 (0부터 4(5-1)까지 2의 배수)  
+print(len(L)) 일 경우 10 (배열된 숫자 갯수)  
+print(L[len(L)-1]) 일 경우 9  (배열된 숫자 갯수 -1)  
+L[0] = 99 (배열된 숫자 0 번째를 99로 바꿈)  
+L[9] = '가나다' (배열된 숫자 9 번째를 문자 가나다 로 바꿈)  
+L[1] = [1,2,3] (배열된 숫자 1 번째를 [1,2,3]으로 바꿈)  
+c = a+b (a와b를 더함)  
+print(a*3) (a를 3번 출력)  
+L.append(10) (리스트 뒤에 추가)  
+L.remove(3) (해당 요소값을 삭제)  
+d.remove('d') (d라는 문자 삭제)  
+print(e[:3]) (God 즉 0~2 문자 출력)  
+print(e[6:]) (love! 즉 6번째 부터 끝까지 출력)  
+print(e[-8:-2]) (-8번째부터 -2번째 까지 출력)  
+~~~
+k= ' God is love! '
+print(k.upper())
+print(k.lower())
+print(k.strip())
+~~~
+~~~
+a = ' God, is, love! '
+print(a.split(","))
+~~~
+~~~
+a = ['apple', 'banana', 'cherry']
+a.append('orange')
+print(a)
+~~~
+~~~a = ['apple', 'banana', 'cherry']
+a.insert(1,'orange') #지정한 곳에 삽입
+print(a)
+~~~
+~~~
+a = ['apple', 'banana', 'cherry']
+a.remove('banana')
+print(a)
+~~~
+~~~
+a = ['apple', 'banana', 'cherry']
+a.pop() # index가 없으면 맨뒤를 지움(cherry지움)
+print(a)
+a.pop(1) # 0포함 1 번째 즉 banana 지움(지정된 위치 삭제)
+print(a)
+~~~
+~~~
+a = ['apple', 'banana', 'cherry']
+del a[0]
+print(a)
+a.clear()  #del a
+print(a)
+~~~
+~~~
+#fruit 에 있는 내용만큼 표시
+fruit = ['apple', 'banana', 'cherry']
+for x in fruit:
+  print(x)
+~~~
+~~~
+#fruit 에 있는 내용만큼 전체 내용 표시
+fruit = ['apple', 'banana', 'cherry']
+for i in range(len(fruit)):
+  print(fruit)
+~~~
+### **SORT**
+~~~
+a = [5,3,6,8,1,9,0]
+a.sort()
+print(a)
+~~~
+~~~
+a = [5,3,6,8,1,9,0,2,4,7]
+a.sort(reverse = True) # 거꾸로
+print(a)
+a.sort() # 정방향
+print(a) 
+~~~
+~~~
+fruit = ['banana','apple', 'Kiwi', 'cherry','Orange']
+fruit.sort() #대소문자 구분하여 정렬
+print(fruit)
+fruit.sort(key=str.lower) #대소문자 구분 없이 정렬
+print(fruit)
+fruit.reverse()
+print(fruit)
+~~~
+~~~
+# list 복사
+fruit = ['banana','apple', 'Kiwi', 'cherry','Orange']
+myList = fruit.copy()
+print(myList)
+cpList = list(fruit)
+print(cpList)
+~~~
+### **2.Tuple**  
+~~~
+l= [1,2,3]
+t = (4,5,6)
+l[0] = 5
+print(l)
+# t[0] = 1  
+# ()는 불가능
+print(t)
+~~~
+~~~
+f = ['banana','apple', 'Kiwi', 'cherry','Orange']
+print(len(f))
+~~~
+~~~
+t = ('apple',)
+print(t)
+print(type(t))
+f = ('banana') #튜플로 인식하기 위해서는 ","필요
+print(f)
+print(type(f))
+~~~
+~~~
+f = ('banana','apple', 'Kiwi', 'cherry','Orange')
+print(f[:4])
+print(f[2:])
+~~~
+~~~
+f = ('banana','apple', 'Kiwi', 'cherry','Orange')
+if 'apple' in f :
+  print("Yes, 'apple' is in")
+~~~
