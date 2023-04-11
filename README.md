@@ -888,6 +888,35 @@ print("계산기 %d %s %d = %d" %(var1, opr, var2, rst))
 ### **Q 0으로 나누려고 하면 계산되지 않게 메세지 출력,**   
 ### **제곱 연산자 추가(숫자1, 연산자, 숫자2) 계산기 함수 만들기**  
 ~~~
+# 계산기 코드
+def calc(v1,v2,op):
+  result = 0
+  if op == '+':
+    result = v1 + v2
+  elif op == '-':
+    result = v1 - v2
+  elif op == '*':
+    result = v1 * v2
+  elif op == '/':
+    result = v1 / v2
+  elif op == '**':
+    result = v1 ** v2
+  return result
+
+rst = 0
+var1 , var2, opr = 0,0,""
+
+opr = input("(+,-,*,/,**) 입력")
+var1 = int(input("1번째 수 입력: "))
+var2 = int(input("2번째 수 입력: "))
+rst = calc(var1,var2,opr) 
+
+
+  
+
+print("계산기 %d %s %d = %d" %(var1, opr, var2, rst))
+~~~
+~~~
 # 전역 변수와 지역변수
 def func1():
   a = 10 # 지역변수
