@@ -821,3 +821,83 @@ for i in range(1,11):
 
 print("1~10 합계(3의 배수 제외): %d" %hap)
 ~~~
+~~~
+fruits = ["사과","바나나","체리"]
+for x in fruits:
+  if x == "바나나":
+    continue
+  print(x)
+~~~
+~~~
+for x in range(6):
+  print(x)
+else:
+  print("끝")
+~~~
+~~~
+for x in range(6):
+  if x ==3: break
+  print(x)
+else:
+  print("끝")
+~~~
+~~~
+# for  문 루프는 비워 둘수 없음
+for x in [0,1,2]:
+  pass
+~~~
+## **함수**  
+~~~
+# 두수를 더하는 함수
+def plus(v1,v2):
+  result = 0 #초기화
+  result = v1 + v2
+  return result
+
+hap = 0
+hap = plus(10,20)
+print("10+20 plus() 처리 결과는 %d" %hap)
+hap = plus(20,30)
+print("10+20 plus() 처리 결과는 %d" %hap)
+~~~
+### **계산기 코드**  
+~~~
+# 계산기 코드
+def calc(v1,v2,op):
+  result = 0
+  if op == '+':
+    result = v1 + v2
+  elif op == '-':
+    result = v1 - v2
+  elif op == '*':
+    result = v1 * v2
+  elif op == '/':
+    result = v1 / v2
+  return result
+
+rst = 0
+var1 , var2, opr = 0,0,""
+
+opr = input("(+,-,*,/) 입력")
+var1 = int(input("1번째 수 입력: "))
+var2 = int(input("2번째 수 입력: "))
+rst = calc(var1,var2,opr)
+
+print("계산기 %d %s %d = %d" %(var1, opr, var2, rst))
+~~~
+### **Q 0으로 나누려고 하면 계산되지 않게 메세지 출력,**   
+### **제곱 연산자 추가(숫자1, 연산자, 숫자2) 계산기 함수 만들기**  
+~~~
+# 전역 변수와 지역변수
+def func1():
+  a = 10 # 지역변수
+  print("func1()에서 a값 %d" %a)
+
+def func2():
+  print("func2()에서 a값 %d" %a)
+
+a= 20 # 지역변수
+
+func1()
+func2() #함수내 선언이 먼저
+~~~
