@@ -888,33 +888,38 @@ print("계산기 %d %s %d = %d" %(var1, opr, var2, rst))
 ### **Q 0으로 나누려고 하면 계산되지 않게 메세지 출력,**   
 ### **제곱 연산자 추가(숫자1, 연산자, 숫자2) 계산기 함수 만들기**  
 ~~~
-# 계산기 코드
-def calc(v1,v2,op):
-  result = 0
-  if op == '+':
-    result = v1 + v2
-  elif op == '-':
-    result = v1 - v2
-  elif op == '*':
-    result = v1 * v2
-  elif op == '/':
-    result = v1 / v2
-  elif op == '**':
-    result = v1 ** v2
-  return result
-
-rst = 0
-var1 , var2, opr = 0,0,""
-
-opr = input("(+,-,*,/,**) 입력")
-var1 = int(input("1번째 수 입력: "))
-var2 = int(input("2번째 수 입력: "))
-rst = calc(var1,var2,opr) 
+def calc(a, b, k):
+result = 0
+if k == '+':
+result = a + b
+elif k == '-':
+result = a - b
+elif k == '*':
+result = a * b
+elif k == '/':
+if b!=0:
+result = a / b
+elif k == '**':
+result = a ** b
+return result
 
 
-  
-
-print("계산기 %d %s %d = %d" %(var1, opr, var2, rst))
+while True:
+a = int(input("첫 번째 숫자를 입력하세요: "))
+k = input("연산자를 입력하세요 (+, -, *, /, ** 중 택 1): ")
+b = int(input("두 번째 숫자를 입력하세요: "))
+res = calc(a, b, k)
+if b==0 and k=="/":
+print("0으로 나눌 수 없습니다.")
+break
+else:
+print("계산기 : %d %s %d = %d" % (a, k, b, res))
+continue
+continue_calculation = input("계속 계산하시겠습니까? (Y/N): ")
+if continue_calculation.upper() == 'N':
+break
+elif continue_calculation.upper() == 'Y':
+continue
 ~~~
 ~~~
 # 전역 변수와 지역변수
@@ -930,3 +935,4 @@ a= 20 # 지역변수
 func1()
 func2() #함수내 선언이 먼저
 ~~~
+![화면 캡처 2023-04-04 144522](https://user-images.githubusercontent.com/127803568/232645483-6e0e2f42-bc86-4865-9d4c-c6fcf5b260c5.png)
