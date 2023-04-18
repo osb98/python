@@ -935,4 +935,141 @@ a= 20 # 지역변수
 func1()
 func2() #함수내 선언이 먼저
 ~~~
-![화면 캡처 2023-04-04 144522](https://user-images.githubusercontent.com/127803568/232645483-6e0e2f42-bc86-4865-9d4c-c6fcf5b260c5.png)
+## **Ch5 파일 처리**  
+"r" read  
+"a" append  
+"w" write  
+"x" create  
+"t' text  
+"b" binary  
+~~~
+# w
+from google.colab import files
+
+f = open("a.txt","w")
+f.write("12345")
+f.close()
+
+f = open("a.txt","w")
+f.write("abcde")
+f.close()
+
+files.download('a.txt')
+~~~
+~~~
+from google.colab import files
+
+f = open("a.txt","w")
+f.write("12345")
+f.close()
+
+f = open("a.txt","a")
+f.write("6789")
+f.close()
+
+files.download('a.txt')
+~~~
+~~~
+from google.colab import files
+#생성된 파일이 있으면 에러
+f = open("b.txt","x")
+f.write("abcde")
+f.close()
+
+files.download('b.txt')
+~~~
+~~~
+# 여러줄 내용 입력
+
+from google.colab import files
+f = open("a.txt","w")
+#f.write("12345678\n987654321\nabcde")
+f.write("""1234
+5678
+890""")
+f.close()
+
+files.download('a.txt')
+~~~
+~~~
+#리스트, 튜플 내용을 입력
+from google.colab import files
+
+t = ("1","2","3","4","\n")
+l = ["a","b","c","d"]
+f= open("a.txt",'w')
+for i in range(0,5):
+  f.writelines(t[i])
+#f.writelines(t)
+f.writelines(l)
+f.close()
+
+files.download('a.txt')
+~~~
+~~~
+# read 모드로 파일 열기
+from google.colab import files
+
+f = open("a.txt","w")
+f.write("1234\n567")
+f.close()
+
+f = open("a.txt","r")
+print(f.read())
+f.close()
+
+
+files.download('a.txt')
+~~~
+~~~
+# readlines() 함수 : 한줄씩 가져옴
+from google.colab import files
+
+f = open("a.txt","r")
+print(f.readline())
+print(f.readline())
+f.close()
+
+files.download('a.txt')
+~~~
+~~~
+from google.colab import files
+#파일 삭제
+import os
+if os.path.exists("a.txt"):
+  os.remove("a.txt") #os.rmdir("folder")
+else:
+  print("파일이 없음")
+~~~
+~~~
+from google.colab import files
+import os
+
+print(os.listdir('.'))
+os.rename("b.txt","a.txt") #file 이름 변경
+print(os.listdir('.'))
+~~~
+~~~
+from google.colab import files
+import os
+# file 존재 유무 확인
+print(os.path.exists('a.txt'))
+print(os.path.exists('b.txt'))
+~~~
+~~~
+#구구단 파일로 저장
+from google.colab import files
+import sys
+
+f = open("a.txt","w",encoding ='utf8')
+sys.stdout = f 
+for i in range(2,10):
+  for j in range(1,10):
+    print("{} x {} = {}".format(i,j,i*j))
+print()
+f.close()
+
+files.download('a.txt')
+~~~
+~~~
+
