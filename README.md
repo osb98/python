@@ -1071,5 +1071,142 @@ f.close()
 
 files.download('a.txt')
 ~~~
+# **VISUAL STUDIO CODE**  
 ~~~
+def Hello():
+    "함수의 설명을 적을수 있음"
+    print("안녕하세요~")
+    print("파이썬 함수 연습입니다.")
 
+Hello()
+help(Hello)
+~~~
+~~~
+c=0
+def add(a,b):
+    "두개의 변수를 받아 더하는 함수"
+    global c 
+    c= a+b
+    print(c)#pass
+
+def addr(a,b):
+    return a+b
+
+add(10,20)
+print(c)
+print("--------------------")
+y = addr(10,20)
+print(y)
+~~~
+~~~
+a = 20 #전역변수
+def func():
+    a = 10 #지역변수
+    print(a)
+
+func()
+print(a)
+~~~
+~~~
+def func():
+    b = 10 #지역변수
+    print(b)
+
+func()
+print(b) #error
+~~~
+~~~
+a=10
+def func():
+    b = 20
+    return a + b
+x = func()
+print(x)
+~~~
+~~~
+def func(a,b=20): #20이 앞에오면 에러 
+    print(a+b)
+
+func(10,30)
+~~~
+~~~
+from tkinter import *
+
+window = Tk()
+
+#
+window.title("윈도우 창 연습")
+window.geometry("400x400") # x는 소문자로
+window.resizable(width=True, height=FALSE)
+
+window.mainloop()
+~~~
+~~~
+from tkinter import *
+
+window = Tk()
+
+window.title("레이블")
+label1 = Label(window, text="안녕하세요! 오세빈 입니다.")
+label2 = Label(window, text="Python<br>Korea", font=("궁서체",30), fg="red")
+label3 = Label(window, text="Love is", bg="yellow",width=20, height=5, anchor=E)
+
+label1.pack()
+label2.pack()
+label3.pack()
+
+window.mainloop()
+~~~
+~~~
+from tkinter import *
+
+window = Tk()
+
+
+
+help(Tk())
+window.mainloop()
+~~~
+~~~
+from tkinter import *
+
+window = Tk()
+
+window.title("김일과 이노키")
+photo=PhotoImage(file = "C:\\Users\\user\\Pictures\\kdg.png")
+photo2=PhotoImage(file = "C:\\Users\\user\\Pictures\\ZZZ.png")
+label1 = Label(window, image = photo)
+label2 = Label(window, image = photo2)
+
+label1.pack(side=LEFT)
+label2.pack(side=RIGHT)
+window.mainloop()
+~~~
+~~~
+from tkinter import *
+
+tk = Tk()
+tk.geometry("400x400")
+button1 = Button(tk, text="파이썬 종료", fg="blue", bg="yellow", command=quit)
+button1.pack()
+
+
+
+
+tk.mainloop()
+~~~
+~~~
+from tkinter import *
+from tkinter import messagebox
+
+def myFunc():
+    messagebox.showinfo("박치기 버튼", "잡박 너무 멋있죠^^")
+
+
+tk = Tk()
+photo = PhotoImage(file="C:\\Users\\user\\Pictures\\kdg.png")
+button1 = Button(tk, image=photo, command=myFunc)
+
+button1.pack()
+tk.mainloop()
+~~~
