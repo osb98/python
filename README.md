@@ -1416,8 +1416,12 @@ tk.mainloop()
             margin: 20px;
             padding: 20px;
         }
-   .main{
+        .main{
             text-align: center;
+        }
+        #myHead{
+        background-color:lightblue;
+        color:red;
         }
     </style>
 </head>
@@ -1434,7 +1438,12 @@ tk.mainloop()
         <h2>파리</h2>
         <p>파리는 프랑스의 수도이다.</p>
     </div>
+     <div id="myHead">
+        <h2>프랑크푸르트</h2>
+        <p>프랑크푸르트는 독일의 수도이다.</p>
+    </div>
 </body>
 </html>
+#class 는 일괄적용 가능 id는 고유적용
 ~~~
 ~~~
