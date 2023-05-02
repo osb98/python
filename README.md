@@ -1210,7 +1210,7 @@ button1 = Button(tk, image=photo, command=myFunc)
 button1.pack()
 tk.mainloop()
 ~~~
-## html 
+## html Visual studio Code 이용 
 ~~~
 <!DOCTYPE html>
 <html>
@@ -1415,12 +1415,14 @@ tk.mainloop()
             border: 2px solid black;
             margin: 20px;
             padding: 20px;
-
+        }
+   .main{
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="city">
+    <div class="city main">
         <h2>서울</h2>
         <p>서울은 한국의 수도이다.</p>
     </div>
