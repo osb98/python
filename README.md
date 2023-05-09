@@ -1447,3 +1447,210 @@ tk.mainloop()
 #class 는 일괄적용 가능 id는 고유적용
 ~~~
 ~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Wildcard selector</title>
+    <style>
+        *{background-color: gainsboro;}
+        h1{color: red}
+        p{color: blue;}
+        body,h1,p,h3{margin: 50; padding: 10;}
+    </style>
+</head>
+<body>
+    <h1>로렘입숨이란</h1>
+    <p>로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.</p>
+    <br>
+    <h3>그거 어디서 났어?</h3>
+    <p>'로렘 입숨'</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector</title>
+    <style>
+        .select{
+            color: purple;
+        }
+        .select2{
+            color: yellow;
+        }
+        .item{color: blue;}
+        .header{background-color: rgb(11, 232, 55);}
+    </style>
+</head>
+
+<body>
+    <h1 class="item header">좋아하는 과일 이름</h1>
+    <ul>
+        <li class="select">사과</li>
+        <li class="select2">복숭아</li>
+        <li class="select header">귤</li>
+        <li>딸기</li>
+    </ul>
+    
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendant css selectro</title>
+    <style>
+        #header h1{color: red;}
+        #section h1,#section h2{color: blue;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">타이틀</h1>
+        <div id="nav">
+            <h1>네비게이션</h1>
+            <h2>후손 적용 될까?</h2>
+        </div>
+    </div>
+    <div id="section">
+        <h1 calss="title">컨텐츠</h1>
+        <h2>후손 적용 될까?</h2>
+        <p>독자가 페이지의 레이아웃으 볼 때 페이지의 읽을</p>
+    </div>
+    
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desc Table</title>
+    <style>
+        table > tr > th {
+            color:red;
+        }
+        #class로 해줘야된다
+        .color_r {color: blue}
+    </style>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th class="color_r">이름</th>
+            <th class="color_r">지역</th>
+        </tr>
+        <tr>
+            <td>김삿갓</td>
+            <td>파주</td>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>방학동</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px; height: 100px;
+            background-color: red;
+            border: 20px solid black;
+            margin: 0,30px; padding: 0 30px;
+        }
+        .box{
+            border-width: thick;
+            border-style: dashed;
+            border-color: black;
+            margin: 20px; padding: 20px;
+            border-radius: 20px 20px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>안녕하세요~ 반갑습니다.</p>
+    </div>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS font size</title>
+    <style>
+        .a{font-size: large;}
+        .b{font-size: 32px;}
+        .c{font-size: 1.5em; font-style: italic;}
+        .d{font-size: 300%;}
+    </style>
+</head>
+<body>
+    <h1>Lorem Ipsum</h1>
+    <p class="a">Lorem Ipsum</p>
+    <p class="b">Lorem Ipsum</p>
+    <p class="c">Lorem Ipsum</p>
+    <p class="d">Lorem Ipsum</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f_big{font-size: 2em;}
+        .f_italic{font-style: italic;}
+        .f_bold{font-weight: bold;}
+        .f_center{text-align: center;}
+        .button{
+            width: 160px; height: 80px;
+            background-color: yellow;
+            border: 10px solid black;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #a9a9a9;
+        }
+        .button > a{display: block; line-height: 80px;}
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="#" class="f_big f_italic f_bold f_center">Click</a>
+    </div>
+</body>
+</html>
+~~~
+~~~
