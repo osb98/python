@@ -1654,3 +1654,84 @@ tk.mainloop()
 </html>
 ~~~
 ~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px; height: 200px;
+            position: absolute;
+        }
+        .box:nth-child(1){
+            background-color: red;
+            left: 10px; top: 10px;
+            z-index: 10;
+        }
+        .box:nth-child(2){
+            background-color: green;
+            left: 50px; top: 50px;
+            z-index: 5;
+        }
+        .box:nth-child(3){
+            background-color: blue;
+            left: 100px; top: 100px;
+            z-index: 1;
+        }
+       </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <h1>위치 속성 적용</h1>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{float: left; width: 500px; height: 500px;}
+    </style>
+</head>
+<body>
+    <img src="kdg.png" alt="kdg">
+    <p>김일은 박치기 왕이다</p>
+    <p>김일의 잡!박!</p>
+</body>
+</html>
+~~~
+~~~
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px; height: 200px;
+            background-color: red;
+            margin: 10px; padding: 10px;
+            float: right;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+</body>
+</html>
+~~~
+~~~
