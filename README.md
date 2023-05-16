@@ -1735,3 +1735,69 @@ tk.mainloop()
 </html>
 ~~~
 ~~~
+f=open("D:\\41815042\\20230516\\singer1.csv",encoding='UTF-8')
+
+s=f.readlines()
+print(s,end="")
+
+s=f.readline()
+print(s,end="")
+
+f.close()
+~~~
+~~~
+with open("D:\\41815042\\20230516\\singer1.csv",encoding='UTF-8')as f:
+
+    s=f.readline()
+    print(s,end="")
+
+    s=f.readline()
+    print(s,end="")
+~~~
+~~~
+def printList(pList) :
+    for data in pList :
+        print(data, end='\t')
+    print()
+with open("D:\\41815042\\20230516\\singer1.csv",encoding='UTF-8')as f:
+    header = f.readline()
+    header = header.strip()
+    headerList = header.split(',')
+    printList(headerList)
+    for s in f:
+        s= s.strip()
+        rowList = s.split(',')
+        printList(rowList)
+~~~
+~~~
+#count
+from tkinter import *
+
+tk =Tk()
+counter = 0
+
+def clicked():
+    global counter
+    counter +=1
+    label1['text'] = '버튼 클릭 수:' + str(counter)
+
+
+def reset():
+    global counter
+    counter =0
+    label1['text'] = '카운트 리셋'
+
+tk.title('GUI 카운터')
+label1 = Label(tk, text='옆에 버튼 있음', fg='blue', font=20)
+label1.pack(side=LEFT, padx=10, pady=10)
+
+#button
+button1 = Button (tk, text='증가',bg='green', font=15,width=30 ,height=5,command=clicked)
+button1.pack(side=LEFT,padx=10,pady=10)
+
+button2 = Button (tk, text='리셋',bg='red', font=15,width=30 ,height=5,command=reset)
+button2.pack(side=LEFT,padx=10,pady=10)
+
+tk.mainloop()
+~~~
+~~~
